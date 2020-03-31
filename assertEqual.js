@@ -7,4 +7,4 @@ const assertEqual = (actual, expected) => {
   }
 };
 
-module.exports = assertEqual
+module.exports = assertEqual;

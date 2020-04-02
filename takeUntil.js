@@ -1,21 +1,19 @@
 
 
 const takeUntil = (array, callback) => {
-  const results = [];
 
-  for (let item of array) {
-    if (callback(item)) {
-      return results;
+  for (let i = 0; i < array.length; i++) {
+    
+    if (callback(array[i])) {
+      return array.slice(0, i);
     }
-
-    results.push(item);
   }
-
-  return results;
 };
 
 module.exports = takeUntil;
 
+
+// ?? Tests
 // const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 // const results1 = takeUntil(data1, x => x < 0);
 // console.log(results1);
